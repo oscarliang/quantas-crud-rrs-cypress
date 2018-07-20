@@ -100,58 +100,18 @@ module.exports = require("react-router-dom");
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.removeAllCookies = exports.changeObjectKey = undefined;
-
-var _universalCookie = __webpack_require__(10);
-
-var _universalCookie2 = _interopRequireDefault(_universalCookie);
-
-var _env = __webpack_require__(1);
-
-var _lodash = __webpack_require__(2);
-
-var _lodash2 = _interopRequireDefault(_lodash);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var changeObjectKey = exports.changeObjectKey = function changeObjectKey(obj, prevKey, currKey) {
-  var clone_object = Object.assign({}, obj);
-  clone_object[currKey] = clone_object[prevKey];
-  delete clone_object[prevKey];
-  return clone_object;
-};
-
-// remove all the cookies which belong to this apps
-var removeAllCookies = exports.removeAllCookies = function removeAllCookies() {
-  var cookies = new _universalCookie2.default();
-  var allCookies = cookies.getAll();
-  _lodash2.default.forEach(allCookies, function (cookie, key) {
-    if (key.startsWith(_env.env.cookiePrefix)) cookies.remove(key);
-  });
-};
-
-/***/ }),
-/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = require("reactstrap");
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-redux");
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -194,7 +154,7 @@ function reducer() {
 }
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -237,19 +197,19 @@ function reducer() {
 }
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = require("normalizr");
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require("universal-cookie");
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -260,21 +220,21 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.preload = undefined;
 
-var _carApi = __webpack_require__(15);
+var _carApi = __webpack_require__(14);
 
-var _universalCookie = __webpack_require__(10);
+var _universalCookie = __webpack_require__(9);
 
 var _universalCookie2 = _interopRequireDefault(_universalCookie);
 
 var _env = __webpack_require__(1);
 
-var _cars = __webpack_require__(7);
+var _cars = __webpack_require__(6);
 
-var _fullOfCarList = __webpack_require__(8);
+var _fullOfCarList = __webpack_require__(7);
 
-var _normalizr = __webpack_require__(9);
+var _normalizr = __webpack_require__(8);
 
-var _schema = __webpack_require__(16);
+var _schema = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -318,7 +278,7 @@ var getAllCars = function getAllCars() {
 };
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -328,7 +288,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _containers = __webpack_require__(13);
+var _containers = __webpack_require__(12);
 
 var _containers2 = _interopRequireDefault(_containers);
 
@@ -354,7 +314,7 @@ var routes = [{
 exports.default = routes;
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -382,7 +342,7 @@ var containers = {
 exports.default = containers;
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -393,23 +353,23 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.findCarService = exports.saveCarService = undefined;
 
-var _carApi = __webpack_require__(15);
+var _carApi = __webpack_require__(14);
 
-var _cars = __webpack_require__(7);
+var _cars = __webpack_require__(6);
 
-var _fullOfCarList = __webpack_require__(8);
+var _fullOfCarList = __webpack_require__(7);
 
-var _normalizr = __webpack_require__(9);
+var _normalizr = __webpack_require__(8);
 
-var _schema = __webpack_require__(16);
+var _schema = __webpack_require__(15);
 
-var _universalCookie = __webpack_require__(10);
+var _universalCookie = __webpack_require__(9);
 
 var _universalCookie2 = _interopRequireDefault(_universalCookie);
 
 var _env = __webpack_require__(1);
 
-var _utils = __webpack_require__(4);
+var _utils = __webpack_require__(16);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -475,7 +435,7 @@ var _findCarService = function _findCarService(filter) {
 };
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -525,7 +485,7 @@ var findCars = exports.findCars = function findCars(filter) {
 };
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -536,11 +496,51 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.carListSchema = exports.carSchema = undefined;
 
-var _normalizr = __webpack_require__(9);
+var _normalizr = __webpack_require__(8);
 
 var carSchema = exports.carSchema = new _normalizr.schema.Entity("cars");
 
 var carListSchema = exports.carListSchema = [carSchema];
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.removeAllCookies = exports.changeObjectKey = undefined;
+
+var _universalCookie = __webpack_require__(9);
+
+var _universalCookie2 = _interopRequireDefault(_universalCookie);
+
+var _env = __webpack_require__(1);
+
+var _lodash = __webpack_require__(2);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var changeObjectKey = exports.changeObjectKey = function changeObjectKey(obj, prevKey, currKey) {
+  var clone_object = Object.assign({}, obj);
+  clone_object[currKey] = clone_object[prevKey];
+  delete clone_object[prevKey];
+  return clone_object;
+};
+
+// remove all the cookies which belong to this apps
+var removeAllCookies = exports.removeAllCookies = function removeAllCookies() {
+  var cookies = new _universalCookie2.default();
+  var allCookies = cookies.getAll();
+  _lodash2.default.forEach(allCookies, function (cookie, key) {
+    if (key.startsWith(_env.env.cookiePrefix)) cookies.remove(key);
+  });
+};
 
 /***/ }),
 /* 17 */
@@ -563,7 +563,7 @@ var _reactNumberFormat = __webpack_require__(28);
 
 var _reactNumberFormat2 = _interopRequireDefault(_reactNumberFormat);
 
-var _reactstrap = __webpack_require__(5);
+var _reactstrap = __webpack_require__(4);
 
 var _lodash = __webpack_require__(2);
 
@@ -743,11 +743,11 @@ var _react2 = _interopRequireDefault(_react);
 
 var _server = __webpack_require__(24);
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(5);
 
 var _reactRouterDom = __webpack_require__(3);
 
-var _routes = __webpack_require__(12);
+var _routes = __webpack_require__(11);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -893,21 +893,21 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(5);
 
 var _validator = __webpack_require__(26);
 
 var _validator2 = _interopRequireDefault(_validator);
 
-var _carService = __webpack_require__(14);
+var _carService = __webpack_require__(13);
 
-var _preload = __webpack_require__(11);
+var _preload = __webpack_require__(10);
 
 var _CarsTable = __webpack_require__(17);
 
 var _CarsTable2 = _interopRequireDefault(_CarsTable);
 
-var _reactstrap = __webpack_require__(5);
+var _reactstrap = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1315,17 +1315,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(5);
 
-var _carService = __webpack_require__(14);
+var _carService = __webpack_require__(13);
 
-var _preload = __webpack_require__(11);
+var _preload = __webpack_require__(10);
 
 var _CarsTable = __webpack_require__(17);
 
 var _CarsTable2 = _interopRequireDefault(_CarsTable);
 
-var _reactstrap = __webpack_require__(5);
+var _reactstrap = __webpack_require__(4);
 
 var _lodash = __webpack_require__(2);
 
@@ -1686,15 +1686,15 @@ var _Footer = __webpack_require__(34);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _containers = __webpack_require__(13);
+var _containers = __webpack_require__(12);
 
 var _containers2 = _interopRequireDefault(_containers);
 
-var _reactstrap = __webpack_require__(5);
+var _reactstrap = __webpack_require__(4);
 
 var _reactRouterDom = __webpack_require__(3);
 
-var _preload = __webpack_require__(11);
+var _preload = __webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2093,8 +2093,11 @@ var _ducks = __webpack_require__(38);
 
 var _ducks2 = _interopRequireDefault(_ducks);
 
+var _utils = __webpack_require__(16);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+(0, _utils.removeAllCookies)();
 // pass window.__initialData__ to preloadedState
 var configureStore = function configureStore(preloadedState) {
   return (0, _redux.createStore)(_ducks2.default, preloadedState, (0, _redux.applyMiddleware)(_reduxThunk2.default));
@@ -2125,11 +2128,11 @@ var _lib = __webpack_require__(39);
 
 var _reactReduxLoadingBar = __webpack_require__(18);
 
-var _cars = __webpack_require__(7);
+var _cars = __webpack_require__(6);
 
 var _cars2 = _interopRequireDefault(_cars);
 
-var _fullOfCarList = __webpack_require__(8);
+var _fullOfCarList = __webpack_require__(7);
 
 var _fullOfCarList2 = _interopRequireDefault(_fullOfCarList);
 
@@ -2171,7 +2174,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(41);
 
-var _routes = __webpack_require__(12);
+var _routes = __webpack_require__(11);
 
 var _routes2 = _interopRequireDefault(_routes);
 
