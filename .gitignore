@@ -8,4 +8,4 @@ node_modules
 .sass-cache
 bower_components
 coverage
-
+package-lock.json
