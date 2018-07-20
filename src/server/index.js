@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import { StaticRouter, matchPath } from "react-router-dom";
 import routes from "../shared/routes";
 import colors from 'colors';
+import _ from "lodash";
 import configureStore from "../shared/store";
 import App from "../shared/app";
 import bodyParser from 'body-parser';

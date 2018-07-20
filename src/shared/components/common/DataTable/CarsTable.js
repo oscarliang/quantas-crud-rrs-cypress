@@ -7,6 +7,7 @@ import {
   CardBody,
   Table
 } from "reactstrap";
+import _ from "lodash";
 
 class CarsTable extends React.Component {
 

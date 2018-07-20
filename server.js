@@ -61,7 +61,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 19);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -102,10 +102,16 @@ module.exports = require("reactstrap");
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-redux");
+module.exports = require("lodash");
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-redux");
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -148,7 +154,7 @@ function reducer() {
 }
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -191,19 +197,19 @@ function reducer() {
 }
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = require("normalizr");
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require("universal-cookie");
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -214,21 +220,21 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.preload = undefined;
 
-var _carApi = __webpack_require__(13);
+var _carApi = __webpack_require__(14);
 
-var _universalCookie = __webpack_require__(8);
+var _universalCookie = __webpack_require__(9);
 
 var _universalCookie2 = _interopRequireDefault(_universalCookie);
 
 var _env = __webpack_require__(1);
 
-var _cars = __webpack_require__(5);
+var _cars = __webpack_require__(6);
 
-var _fullOfCarList = __webpack_require__(6);
+var _fullOfCarList = __webpack_require__(7);
 
-var _normalizr = __webpack_require__(7);
+var _normalizr = __webpack_require__(8);
 
-var _schema = __webpack_require__(14);
+var _schema = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -272,7 +278,7 @@ var getAllCars = function getAllCars() {
 };
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -282,11 +288,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _containers = __webpack_require__(11);
+var _containers = __webpack_require__(12);
 
 var _containers2 = _interopRequireDefault(_containers);
 
-var _Full = __webpack_require__(29);
+var _Full = __webpack_require__(30);
 
 var _Full2 = _interopRequireDefault(_Full);
 
@@ -308,7 +314,7 @@ var routes = [{
 exports.default = routes;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -318,11 +324,11 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _homePageContainer = __webpack_require__(23);
+var _homePageContainer = __webpack_require__(24);
 
 var _homePageContainer2 = _interopRequireDefault(_homePageContainer);
 
-var _searchPageContainer = __webpack_require__(28);
+var _searchPageContainer = __webpack_require__(29);
 
 var _searchPageContainer2 = _interopRequireDefault(_searchPageContainer);
 
@@ -336,7 +342,7 @@ var containers = {
 exports.default = containers;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -347,23 +353,23 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.findCarService = exports.saveCarService = undefined;
 
-var _carApi = __webpack_require__(13);
+var _carApi = __webpack_require__(14);
 
-var _cars = __webpack_require__(5);
+var _cars = __webpack_require__(6);
 
-var _fullOfCarList = __webpack_require__(6);
+var _fullOfCarList = __webpack_require__(7);
 
-var _normalizr = __webpack_require__(7);
+var _normalizr = __webpack_require__(8);
 
-var _schema = __webpack_require__(14);
+var _schema = __webpack_require__(15);
 
-var _universalCookie = __webpack_require__(8);
+var _universalCookie = __webpack_require__(9);
 
 var _universalCookie2 = _interopRequireDefault(_universalCookie);
 
 var _env = __webpack_require__(1);
 
-var _utils = __webpack_require__(26);
+var _utils = __webpack_require__(27);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -429,7 +435,7 @@ var _findCarService = function _findCarService(filter) {
 };
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -440,7 +446,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.findCars = exports.saveCar = exports.fetchAllCars = undefined;
 
-var _axios = __webpack_require__(25);
+var _axios = __webpack_require__(26);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -479,7 +485,7 @@ var findCars = exports.findCars = function findCars(filter) {
 };
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -490,14 +496,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.carListSchema = exports.carSchema = undefined;
 
-var _normalizr = __webpack_require__(7);
+var _normalizr = __webpack_require__(8);
 
 var carSchema = exports.carSchema = new _normalizr.schema.Entity("cars");
 
 var carListSchema = exports.carListSchema = [carSchema];
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -513,11 +519,15 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactNumberFormat = __webpack_require__(27);
+var _reactNumberFormat = __webpack_require__(28);
 
 var _reactNumberFormat2 = _interopRequireDefault(_reactNumberFormat);
 
 var _reactstrap = __webpack_require__(3);
+
+var _lodash = __webpack_require__(4);
+
+var _lodash2 = _interopRequireDefault(_lodash);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -542,7 +552,7 @@ var CarsTable = function (_React$Component) {
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = CarsTable.__proto__ || Object.getPrototypeOf(CarsTable)).call.apply(_ref, [this].concat(args))), _this), _this.renderTableBody = function () {
-      return _.values(_this.props.cars).map(function (car, index) {
+      return _lodash2.default.values(_this.props.cars).map(function (car, index) {
         return _react2.default.createElement(
           "tr",
           { key: index },
@@ -568,7 +578,7 @@ var CarsTable = function (_React$Component) {
           _react2.default.createElement(
             "td",
             null,
-            _.replace(car.drive, /\|/g, ' ').toUpperCase()
+            _lodash2.default.replace(car.drive, /\|/g, ' ').toUpperCase()
           ),
           _react2.default.createElement(
             "td",
@@ -657,33 +667,33 @@ var CarsTable = function (_React$Component) {
 exports.default = CarsTable;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-redux-loading-bar");
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _express = __webpack_require__(19);
+var _express = __webpack_require__(20);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _cors = __webpack_require__(20);
+var _cors = __webpack_require__(21);
 
 var _cors2 = _interopRequireDefault(_cors);
 
-var _serializeJavascript = __webpack_require__(21);
+var _serializeJavascript = __webpack_require__(22);
 
 var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
 
@@ -691,33 +701,37 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(22);
+var _server = __webpack_require__(23);
 
-var _reactRedux = __webpack_require__(4);
+var _reactRedux = __webpack_require__(5);
 
 var _reactRouterDom = __webpack_require__(2);
 
-var _routes = __webpack_require__(10);
+var _routes = __webpack_require__(11);
 
 var _routes2 = _interopRequireDefault(_routes);
 
-var _colors = __webpack_require__(34);
+var _colors = __webpack_require__(35);
 
 var _colors2 = _interopRequireDefault(_colors);
 
-var _store = __webpack_require__(35);
+var _lodash = __webpack_require__(4);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _store = __webpack_require__(36);
 
 var _store2 = _interopRequireDefault(_store);
 
-var _app = __webpack_require__(39);
+var _app = __webpack_require__(40);
 
 var _app2 = _interopRequireDefault(_app);
 
-var _bodyParser = __webpack_require__(41);
+var _bodyParser = __webpack_require__(42);
 
 var _bodyParser2 = _interopRequireDefault(_bodyParser);
 
-var _db = __webpack_require__(42);
+var _db = __webpack_require__(43);
 
 var db = _interopRequireWildcard(_db);
 
@@ -799,31 +813,31 @@ app.listen(process.env.PORT || 3000, function () {
 });
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 module.exports = require("express");
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 module.exports = require("cors");
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 module.exports = require("serialize-javascript");
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -839,17 +853,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(4);
+var _reactRedux = __webpack_require__(5);
 
-var _validator = __webpack_require__(24);
+var _validator = __webpack_require__(25);
 
 var _validator2 = _interopRequireDefault(_validator);
 
-var _carService = __webpack_require__(12);
+var _carService = __webpack_require__(13);
 
-var _preload = __webpack_require__(9);
+var _preload = __webpack_require__(10);
 
-var _CarsTable = __webpack_require__(15);
+var _CarsTable = __webpack_require__(16);
 
 var _CarsTable2 = _interopRequireDefault(_CarsTable);
 
@@ -1227,19 +1241,19 @@ var HomepageContainer = function (_React$Component) {
 exports.default = (0, _reactRedux.connect)(mapState, mapDispatch)(HomepageContainer);
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 module.exports = require("validator");
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 module.exports = require("axios");
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1250,7 +1264,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.removeAllCookies = exports.changeObjectKey = undefined;
 
-var _universalCookie = __webpack_require__(8);
+var _universalCookie = __webpack_require__(9);
 
 var _universalCookie2 = _interopRequireDefault(_universalCookie);
 
@@ -1275,13 +1289,13 @@ var removeAllCookies = exports.removeAllCookies = function removeAllCookies() {
 };
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-number-format");
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1297,17 +1311,21 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(4);
+var _reactRedux = __webpack_require__(5);
 
-var _carService = __webpack_require__(12);
+var _carService = __webpack_require__(13);
 
-var _preload = __webpack_require__(9);
+var _preload = __webpack_require__(10);
 
-var _CarsTable = __webpack_require__(15);
+var _CarsTable = __webpack_require__(16);
 
 var _CarsTable2 = _interopRequireDefault(_CarsTable);
 
 var _reactstrap = __webpack_require__(3);
+
+var _lodash = __webpack_require__(4);
+
+var _lodash2 = _interopRequireDefault(_lodash);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1382,7 +1400,7 @@ var SearchPageContainer = function (_React$Component) {
 
     _this.renderFilters = function () {
       var filters = ["name", "brand", "drive"];
-      return _.map(filters, function (filter, index) {
+      return _lodash2.default.map(filters, function (filter, index) {
         return _react2.default.createElement(
           "option",
           { key: index, value: filter },
@@ -1632,7 +1650,7 @@ var SearchPageContainer = function (_React$Component) {
 exports.default = (0, _reactRedux.connect)(mapState, mapDispatch)(SearchPageContainer);
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1648,23 +1666,23 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Header = __webpack_require__(30);
+var _Header = __webpack_require__(31);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Sidebar = __webpack_require__(31);
+var _Sidebar = __webpack_require__(32);
 
 var _Sidebar2 = _interopRequireDefault(_Sidebar);
 
-var _Aside = __webpack_require__(32);
+var _Aside = __webpack_require__(33);
 
 var _Aside2 = _interopRequireDefault(_Aside);
 
-var _Footer = __webpack_require__(33);
+var _Footer = __webpack_require__(34);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _containers = __webpack_require__(11);
+var _containers = __webpack_require__(12);
 
 var _containers2 = _interopRequireDefault(_containers);
 
@@ -1672,7 +1690,7 @@ var _reactstrap = __webpack_require__(3);
 
 var _reactRouterDom = __webpack_require__(2);
 
-var _preload = __webpack_require__(9);
+var _preload = __webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1735,7 +1753,7 @@ var Full = function (_React$Component) {
 exports.default = Full;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1751,7 +1769,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactReduxLoadingBar = __webpack_require__(16);
+var _reactReduxLoadingBar = __webpack_require__(17);
 
 var _reactReduxLoadingBar2 = _interopRequireDefault(_reactReduxLoadingBar);
 
@@ -1829,7 +1847,7 @@ var Header = function (_React$Component) {
 exports.default = Header;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1924,7 +1942,7 @@ var Sidebar = function (_React$Component) {
 exports.default = Sidebar;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1977,7 +1995,7 @@ var Aside = function (_React$Component) {
 exports.default = Aside;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2045,13 +2063,13 @@ var Footer = function (_React$Component) {
 exports.default = Footer;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports) {
 
 module.exports = require("colors");
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2061,13 +2079,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(17);
+var _redux = __webpack_require__(18);
 
-var _reduxThunk = __webpack_require__(36);
+var _reduxThunk = __webpack_require__(37);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _ducks = __webpack_require__(37);
+var _ducks = __webpack_require__(38);
 
 var _ducks2 = _interopRequireDefault(_ducks);
 
@@ -2081,13 +2099,13 @@ var configureStore = function configureStore(preloadedState) {
 exports.default = configureStore;
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2097,17 +2115,17 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _redux = __webpack_require__(17);
+var _redux = __webpack_require__(18);
 
-var _lib = __webpack_require__(38);
+var _lib = __webpack_require__(39);
 
-var _reactReduxLoadingBar = __webpack_require__(16);
+var _reactReduxLoadingBar = __webpack_require__(17);
 
-var _cars = __webpack_require__(5);
+var _cars = __webpack_require__(6);
 
 var _cars2 = _interopRequireDefault(_cars);
 
-var _fullOfCarList = __webpack_require__(6);
+var _fullOfCarList = __webpack_require__(7);
 
 var _fullOfCarList2 = _interopRequireDefault(_fullOfCarList);
 
@@ -2123,13 +2141,13 @@ var reducers = (0, _redux.combineReducers)({
 exports.default = reducers;
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-router-redux/lib");
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2147,9 +2165,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(40);
+var _reactDom = __webpack_require__(41);
 
-var _routes = __webpack_require__(10);
+var _routes = __webpack_require__(11);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -2195,19 +2213,19 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom");
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 module.exports = require("body-parser");
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2218,11 +2236,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.save = exports.findAllCars = exports.getAllCars = undefined;
 
-var _cars = __webpack_require__(43);
+var _cars = __webpack_require__(44);
 
 var _cars2 = _interopRequireDefault(_cars);
 
-var _lodash = __webpack_require__(44);
+var _lodash = __webpack_require__(4);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -2286,16 +2304,10 @@ var save = exports.save = function save(car) {
 };
 
 /***/ }),
-/* 43 */
-/***/ (function(module, exports) {
-
-module.exports = [{"id":100,"brand":"porsche","name":"911 Carrera","price":280000,"drive":"awd","imageUrl":"http://files1.porsche.com/filestore/image/multimedia/none/991-2nd-c4s-modelimage-sideshot/model/15bd09cf-553b-11e5-8c32-0019999cd470;s25/porsche-model.png"},{"id":110,"brand":"porsche","name":"Cayenne GTS","price":170000,"drive":"awd","imageUrl":"http://files3.porsche.com/filestore/image/multimedia/none/rd-2013-9pa-e2-2nd-gts-modelimage-sideshot/model/c287d350-5920-11e4-99aa-001a64c55f5c;s25/porsche-model.png"},{"id":120,"brand":"porsche","name":"Panamera 4S","price":320000,"drive":"2wd|4wd","imageUrl":"http://files1.porsche.com/filestore/image/multimedia/none/970-g2-4s-modelimage-sideshot/model/a23b6da0-33b9-11e6-9225-0019999cd470;s25/porsche-model.png"},{"id":200,"brand":"bmw","name":"Lightning Lap 2017: BMW M240i","price":90000,"drive":"2wd|4wd|awd","imageUrl":"https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/images/17q3/685273/bmw-m240i-at-lightning-lap-2017-feature-car-and-driver-photo-687963-s-original.jpg?crop=1xw:1xh;center,center&resize=900:*"},{"id":210,"brand":"bmw","name":"2017 BMW M240i Coupe Automatic","price":145000,"drive":"2wd","imageUrl":"https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/images/16q3/669461/2017-bmw-m240i-coupe-automatic-tested-review-car-and-driver-photo-670913-s-original.jpg?crop=1xw:1xh;center,center&resize=900:*"},{"id":220,"brand":"bmw","name":"BMW 4-series News and Reviews","price":130000,"drive":"4wd|awd","imageUrl":"https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/images/media/683956/2018-bmw-4-series-idrive-infotainment-review-car-and-driver-photo-683962-s-original.jpg?crop=1xw:1xh;center,center&resize=740:*"},{"id":300,"brand":"audi","name":"Audi S5 Auto quattro","price":115000,"drive":"2wd|4wd|awd","imageUrl":"https://hips.hearstapps.com/hmg-prod/images/2018-audi-a5-sportback-01-placement-1524499430.jpg?crop=1xw:1xh;center,center&resize=900:*"},{"id":310,"brand":"audi","name":"Audi TT Sport Manual","price":80000,"drive":"2wd|4wd","imageUrl":"https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/images/16q1/665019/2016-audi-tts-test-review-car-and-driver-photo-665850-s-original.jpg"}]
-
-/***/ }),
 /* 44 */
 /***/ (function(module, exports) {
 
-module.exports = require("lodash");
+module.exports = [{"id":100,"brand":"porsche","name":"911 Carrera","price":280000,"drive":"awd","imageUrl":"http://files1.porsche.com/filestore/image/multimedia/none/991-2nd-c4s-modelimage-sideshot/model/15bd09cf-553b-11e5-8c32-0019999cd470;s25/porsche-model.png"},{"id":110,"brand":"porsche","name":"Cayenne GTS","price":170000,"drive":"awd","imageUrl":"http://files3.porsche.com/filestore/image/multimedia/none/rd-2013-9pa-e2-2nd-gts-modelimage-sideshot/model/c287d350-5920-11e4-99aa-001a64c55f5c;s25/porsche-model.png"},{"id":120,"brand":"porsche","name":"Panamera 4S","price":320000,"drive":"2wd|4wd","imageUrl":"http://files1.porsche.com/filestore/image/multimedia/none/970-g2-4s-modelimage-sideshot/model/a23b6da0-33b9-11e6-9225-0019999cd470;s25/porsche-model.png"},{"id":200,"brand":"bmw","name":"Lightning Lap 2017: BMW M240i","price":90000,"drive":"2wd|4wd|awd","imageUrl":"https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/images/17q3/685273/bmw-m240i-at-lightning-lap-2017-feature-car-and-driver-photo-687963-s-original.jpg?crop=1xw:1xh;center,center&resize=900:*"},{"id":210,"brand":"bmw","name":"2017 BMW M240i Coupe Automatic","price":145000,"drive":"2wd","imageUrl":"https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/images/16q3/669461/2017-bmw-m240i-coupe-automatic-tested-review-car-and-driver-photo-670913-s-original.jpg?crop=1xw:1xh;center,center&resize=900:*"},{"id":220,"brand":"bmw","name":"BMW 4-series News and Reviews","price":130000,"drive":"4wd|awd","imageUrl":"https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/images/media/683956/2018-bmw-4-series-idrive-infotainment-review-car-and-driver-photo-683962-s-original.jpg?crop=1xw:1xh;center,center&resize=740:*"},{"id":300,"brand":"audi","name":"Audi S5 Auto quattro","price":115000,"drive":"2wd|4wd|awd","imageUrl":"https://hips.hearstapps.com/hmg-prod/images/2018-audi-a5-sportback-01-placement-1524499430.jpg?crop=1xw:1xh;center,center&resize=900:*"},{"id":310,"brand":"audi","name":"Audi TT Sport Manual","price":80000,"drive":"2wd|4wd","imageUrl":"https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/images/16q1/665019/2016-audi-tts-test-review-car-and-driver-photo-665850-s-original.jpg"}]
 
 /***/ }),
 /* 45 */
